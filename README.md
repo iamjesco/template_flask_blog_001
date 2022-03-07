@@ -41,5 +41,8 @@ For now this is just meant bo a basic template of a one page web app.
 * Edit footer
 * Edite feaured section on home page
 * Update landing page
+* Add Bootstrap post warnings
+* Add post categories
+
 
 
