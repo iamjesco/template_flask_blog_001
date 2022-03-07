@@ -26,3 +26,10 @@ For now this is just meant bo a basic template of a one page web app.
 ![](https://img.shields.io/static/v1?style=for-the-badge&label=Flask&message=2.0&color=007700&logo=flask) &nbsp;&nbsp;
 ![](https://img.shields.io/static/v1?style=for-the-badge&label=SQLite&message=3.38&color=007700&logo=sqlite) 
 
+### Flask Packages used
+
+* [Flask-Sqlalchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) &nbsp; (ORM used for database Management)
+* [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.0.x/) &nbsp;(Form validation and rendering library)
+
+# Notes
+* Requirements.txt file is included
