@@ -1,7 +1,42 @@
 {% extends 'index.html' %}
 
 {% block content %}
-
-	<h1>Dashboard</h1>
-
+	<section class="dashboard">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<form class="p-5 bg-light" action="" method="post" novalidate>
+						{{ form.csrf_token() }}
+						<h4 class="mb-5 text-center">Create new post</h4>
+						<div class="mb-5">
+							{{ form.title.label(class="form-label") }}
+							{{ form.title(class="form-control mb-1") }}
+							{% if form.title.errors %}
+								{% for error in form.title.errors %}
+									<div class="alert alert-danger py-1 px-3 fs-5">
+										<span>{{ error }}</span>
+									</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+						<div class="mb-5">
+							{{ form.body.label(class="form-label") }}
+							{{ form.body(class="form-control mb-1") }}
+							{% if form.title.errors %}
+								{% for error in form.title.errors %}
+									<div class="alert alert-danger py-1 px-3 fs-5">
+										<span>{{ error }}</span>
+									</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+						<button type="submit" class="btn btn-success">Create Post</button>
+					<button type="reset" class="btn btn-warning">Clear</button>
+					</form>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

@@ -11,12 +11,35 @@
 }
 
 .about {
-  background-image: linear-gradient(45deg, #000, #006);
+  background-color: #eeeeee;
 }
 
 .footer {
-  background-color: #1A84B0;
   height: 30vh;
+}
+
+.dashboard {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #000, #006);
+}
+
+.feed {
+  background-image: linear-gradient(45deg, #000, #006);
+}
+.feed-header {
+  background-color: #333333;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+.feed-header-title {
+  color: #ffffff;
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

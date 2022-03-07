@@ -2,6 +2,49 @@
 
 {% block content %}
 
-	<h1>Blog Feed</h1>
+	<section id="feed" class="feed">
+		<header class="feed-header">
+			<h1 class="feed-header-title">
+				Blog
+			</h1>
+		</header>
+		<div class="container py-5">
+			<div class="row">
+				<main class="feed-content col-md-8">
+					{% for post in all_posts %}
+						<article class="card mb-5">
+							<header class="card-header">
+								{{ post.title }}
+							</header>
+							<div class="card-body">
+								<p class="card-text">
+									{{ post.body | truncate(150) }}
+								</p>
+								<a href="#" class="btn btn-info">Read More</a>
+							</div>
+						</article>
+					{% endfor %}
+				</main>
+				<div class="right-column col-md-1">
+				</div>
+				<aside class="right-column col-md-3">
+					<form class="d-flex mb-3">
+				        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+				        <button class="btn btn-success" type="submit">Search</button>
+					</form>
+					<article class="card">
+						<div class="card-header">
+							Featured
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">An item</li>
+							<li class="list-group-item">A second item</li>
+							<li class="list-group-item">A third item</li>
+						</ul>
+					</article>
+				</aside>
+			</div>
+		</div>
+	</section>
 
 {% endblock %}
