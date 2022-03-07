@@ -33,3 +33,13 @@ For now this is just meant bo a basic template of a one page web app.
 
 # Notes
 * Requirements.txt file is included
+
+# To Do's
+
+* Create single post page (detail page)
+* Edit dashboard page
+* Edit footer
+* Edite feaured section on home page
+* Update landing page
+
+
