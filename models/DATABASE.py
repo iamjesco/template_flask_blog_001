@@ -6,6 +6,7 @@ class Post(db.Model):
 	pk = db.Column(db.Integer, primary_key=True)
 	title = db.Column(db.String(255), nullable=False, unique=True)
 	body = db.Column(db.Text(3000), nullable=False)
+	category = db.Column(db.String(50), nullable=False)
 	author = db.Column(db.String(100), default='Jesco')
 	created = db.Column(db.DateTime, default=dt.utcnow)
 	

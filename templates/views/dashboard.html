@@ -1,15 +1,13 @@
 {% extends 'index.html' %}
 
 {% block content %}
-	<section class="dashboard">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-6">
-					<form class="p-5 bg-light" action="" method="post" novalidate>
+	<section class="dashboard py-5">
+		<div class="container py-5">
+			<form method="post" novalidate>
+				<div class="row h-100 d-flex">
+					<section class="col-md-8">
 						{{ form.csrf_token() }}
-						<h4 class="mb-5 text-center">Create new post</h4>
-						<div class="mb-5">
+						<div class="mb-3">
 							{{ form.title.label(class="form-label") }}
 							{{ form.title(class="form-control mb-1") }}
 							{% if form.title.errors %}
@@ -20,10 +18,10 @@
 								{% endfor %}
 							{% endif %}
 						</div>
-						<div class="mb-5">
+						<div class="mb-3">
 							{{ form.body.label(class="form-label") }}
-							{{ form.body(class="form-control mb-1") }}
-							{% if form.title.errors %}
+							{{ form.body }}
+							{% if form.body.errors %}
 								{% for error in form.title.errors %}
 									<div class="alert alert-danger py-1 px-3 fs-5">
 										<span>{{ error }}</span>
@@ -31,12 +29,28 @@
 								{% endfor %}
 							{% endif %}
 						</div>
-						<button type="submit" class="btn btn-success">Create Post</button>
-					<button type="reset" class="btn btn-warning">Clear</button>
-					</form>
+					</section>
+					<section class="col-md-4">
+						<div class="mb-5">
+							{{ form.category.label(class="form-label") }}
+							{{ form.category(class="form-control mb-1") }}
+							{% if form.category.errors %}
+								{% for error in form.category.errors %}
+									<div class="alert alert-danger py-1 px-3 fs-5">
+										<span>{{ error }}</span>
+									</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+						<div class="mb-3 d-flex flex-column">
+							<button type="submit" class="btn btn-success mb-3">Create Post</button>
+							<button type="reset" class="btn btn-warning mb-3">Clear Form</button>
+						</div>
+					</section>
 				</div>
-				<div class="col-md-3"></div>
-			</div>
+			</form>
 		</div>
 	</section>
+	{{ ckeditor.load() }}
+    {{ ckeditor.config(name='body', height=500) }}
 {% endblock %}

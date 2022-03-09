@@ -36,8 +36,10 @@ For now this is just meant bo a basic template of a one page web app.
 
 # To Do's
 
-* Create single post page (detail page)
-* Edit dashboard page
+* <s>Create single post page (detail page)</s>
+* <s>Add Rich Text Editor</s> 
+* Configure rich text editor using [Ckeditor config example](https://www.codetd.com/en/article/9844870) (ongoing)
+* Edit dashboard page (ongoing)
 * Edit footer
 * Edite feaured section on home page
 * Update landing page
